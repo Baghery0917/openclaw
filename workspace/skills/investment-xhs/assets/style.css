@@ -1,0 +1,738 @@
+/* style.css - 基于DESIGN.md的现代投资分析报告样式 */
+
+/* ==========================================================================
+   1. CSS变量 - 设计令牌
+   ========================================================================== */
+
+:root {
+  /* 主色调 */
+  --primary-900: #0f172a;
+  --primary-800: #1e293b;
+  --primary-700: #334155;
+  --primary-600: #475569;
+  
+  /* 强调色 */
+  --accent-600: #2563eb;
+  --accent-500: #3b82f6;
+  --accent-400: #60a5fa;
+  
+  /* 语义色 */
+  --success-600: #059669;
+  --success-100: #d1fae5;
+  --warning-600: #d97706;
+  --warning-100: #fef3c7;
+  --danger-600: #dc2626;
+  --danger-100: #fee2e2;
+  
+  /* 中性色 */
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
+  --white: #ffffff;
+  
+  /* 渐变 */
+  --gradient-primary: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-600) 0%, var(--accent-500) 100%);
+  
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-accent: 0 4px 12px rgba(37, 99, 235, 0.2);
+  
+  /* 间距系统 (8px基准) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  
+  /* 边框半径 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* 字体大小 */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+}
+
+/* ==========================================================================
+   2. 基础样式重置
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-900);
+  background-color: var(--gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   3. 排版系统
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-900);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-6);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--accent-500);
+  margin-bottom: var(--space-8);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-6);
+  color: var(--primary-700);
+}
+
+h4 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--primary-600);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent-600);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-500);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. 报告容器布局
+   ========================================================================== */
+
+.report-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.page {
+  padding: var(--space-16) var(--space-24);
+  min-height: 100vh;
+}
+
+.page:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   5. 封面页样式
+   ========================================================================== */
+
+.cover-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+}
+
+.cover-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.company-name {
+  font-size: var(--text-6xl);
+  font-weight: 800;
+  margin: var(--space-6) 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.cover-subtitle {
+  font-size: var(--text-2xl);
+  opacity: 0.9;
+  margin-bottom: var(--space-16);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.cover-metrics {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  margin: var(--space-16) 0;
+  flex-wrap: wrap;
+}
+
+.metric-item {
+  text-align: center;
+  min-width: 140px;
+}
+
+.metric-value {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.metric-label {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cover-footer {
+  margin-top: var(--space-24);
+  font-size: var(--text-sm);
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: var(--space-6);
+}
+
+.report-date, .analyst-name {
+  margin-bottom: var(--space-2);
+}
+
+.disclaimer {
+  margin-top: var(--space-4);
+  font-size: var(--text-xs);
+  opacity: 0.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   6. 执行摘要区域
+   ========================================================================== */
+
+.summary-page {
+  background: var(--gray-50);
+}
+
+.executive-summary {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-12);
+  padding: var(--space-8);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--accent-500);
+  box-shadow: var(--shadow-md);
+}
+
+.key-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.metric-card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.metric-card.positive {
+  background: linear-gradient(135deg, var(--success-100) 0%, rgba(209, 250, 229, 0.7) 100%);
+  border-color: rgba(5, 150, 105, 0.2);
+}
+
+.metric-card.neutral {
+  background: linear-gradient(135deg, var(--warning-100) 0%, rgba(254, 243, 199, 0.7) 100%);
+  border-color: rgba(217, 119, 6, 0.2);
+}
+
+.metric-card.negative {
+  background: linear-gradient(135deg, var(--danger-100) 0%, rgba(254, 226, 226, 0.7) 100%);
+  border-color: rgba(220, 38, 38, 0.2);
+}
+
+.metric-title {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  margin-bottom: var(--space-3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--primary-900);
+}
+
+.metric-desc {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   7. 五维分析区域
+   ========================================================================== */
+
+.analysis-page {
+  background: var(--white);
+}
+
+.dimension-section {
+  margin-bottom: var(--space-16);
+  padding: var(--space-8);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--accent-500);
+  transition: all 0.3s ease;
+}
+
+.dimension-section:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.dimension-section h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  color: var(--primary-800);
+}
+
+.dimension-icon {
+  font-size: var(--text-2xl);
+}
+
+.dimension-content {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: var(--space-6);
+}
+
+.dimension-content p {
+  margin-bottom: var(--space-4);
+}
+
+.reliability-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reliability-a {
+  background: var(--success-100);
+  color: var(--success-600);
+  border: 1px solid var(--success-600);
+}
+
+.reliability-b {
+  background: var(--warning-100);
+  color: var(--warning-600);
+  border: 1px solid var(--warning-600);
+}
+
+.reliability-c {
+  background: var(--danger-100);
+  color: var(--danger-600);
+  border: 1px solid var(--danger-600);
+}
+
+/* ==========================================================================
+   8. 风险评估区域
+   ========================================================================== */
+
+.risk-page {
+  background: var(--gray-50);
+}
+
+.risk-list {
+  list-style: none;
+  margin: var(--space-8) 0;
+}
+
+.risk-list li {
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-3);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--warning-600);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.risk-list li::before {
+  content: '⚠️';
+  font-size: var(--text-lg);
+}
+
+/* ==========================================================================
+   9. 投资建议区域
+   ========================================================================== */
+
+.recommendation-page {
+  background: var(--white);
+}
+
+.rating-display {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-8);
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.rating-buy {
+  background: linear-gradient(135deg, var(--success-100) 0%, rgba(209, 250, 229, 0.9) 100%);
+  color: var(--success-600);
+  border: 2px solid var(--success-600);
+}
+
+.rating-hold {
+  background: linear-gradient(135deg, var(--warning-100) 0%, rgba(254, 243, 199, 0.9) 100%);
+  color: var(--warning-600);
+  border: 2px solid var(--warning-600);
+}
+
+.rating-sell {
+  background: linear-gradient(135deg, var(--danger-100) 0%, rgba(254, 226, 226, 0.9) 100%);
+  color: var(--danger-600);
+  border: 2px solid var(--danger-600);
+}
+
+/* ==========================================================================
+   10. 可靠性评估表格
+   ========================================================================== */
+
+.reliability-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-8) 0;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.reliability-table th {
+  background: var(--primary-800);
+  color: var(--white);
+  font-weight: 600;
+  text-align: left;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reliability-table td {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--gray-200);
+  font-size: var(--text-sm);
+}
+
+.reliability-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reliability-table tr:hover {
+  background: var(--gray-50);
+}
+
+/* ==========================================================================
+   11. 页脚样式
+   ========================================================================== */
+
+.footer-page {
+  background: var(--primary-900);
+  color: var(--gray-300);
+  text-align: center;
+  padding: var(--space-12) var(--space-24);
+}
+
+.footer-logo {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-6);
+}
+
+.footer-contact {
+  font-size: var(--text-sm);
+  opacity: 0.7;
+  margin-top: var(--space-8);
+}
+
+/* ==========================================================================
+   12. 响应式设计
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .page {
+    padding: var(--space-12) var(--space-16);
+  }
+  
+  .company-name {
+    font-size: var(--text-5xl);
+  }
+  
+  .cover-metrics {
+    gap: var(--space-8);
+  }
+  
+  .key-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--space-8) var(--space-6);
+  }
+  
+  .company-name {
+    font-size: var(--text-4xl);
+  }
+  
+  .cover-subtitle {
+    font-size: var(--text-xl);
+  }
+  
+  .cover-metrics {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .key-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metric-value {
+    font-size: var(--text-2xl);
+  }
+  
+  h1 {
+    font-size: var(--text-4xl);
+  }
+  
+  h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  h3 {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: var(--space-6) var(--space-4);
+  }
+  
+  .company-name {
+    font-size: var(--text-3xl);
+  }
+  
+  .cover-badge {
+    padding: var(--space-1) var(--space-4);
+    font-size: var(--text-xs);
+  }
+}
+
+/* ==========================================================================
+   13. 工具类
+   ========================================================================== */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-12 { margin-top: var(--space-12); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-12 { margin-bottom: var(--space-12); }
+
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+.bg-white { background: var(--white); }
+.bg-gray-50 { background: var(--gray-50); }
+.bg-gray-100 { background: var(--gray-100); }
+
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-md { border-radius: var(--radius-md); }
+
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* ==========================================================================
+   14. 动画效果
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+
+.dimension-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.metric-card {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ==========================================================================
+   15. 打印样式
+   ========================================================================== */
+
+@media print {
+  .report-container {
+    box-shadow: none;
+    max-width: 100%;
+  }
+  
+  .page {
+    padding: 20px;
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+  
+  .cover-page {
+    background: #0f172a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .metric-card:hover {
+    transform: none;
+  }
+  
+  .footer-page {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "tavily": {
+      "name": "Tavily AI Search",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tavily",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "playwright-mcp": {
+      "name": "Playwright MCP",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=playwright-mcp",
+      "source": "skillhub",
+      "version": "1.0.0"
+    }
+  }
+}

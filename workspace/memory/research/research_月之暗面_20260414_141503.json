@@ -1,0 +1,50 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-14T14:14:57.723504",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "| 作者/团队 | 博客名称 | 链接 | 所属机构 | 研究方向 | 推荐理由 | 适用人群 | 学习重点 | 派别分类 |\n ---  ---  ---  --- \n| 通义千问团队 | Qwen...",
+          "source": "网络搜索结果",
+          "url": "https://github.com/yayxs/Moonshot-Kimi",
+          "reliability": "A",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "拥有2020项AI相关专利",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

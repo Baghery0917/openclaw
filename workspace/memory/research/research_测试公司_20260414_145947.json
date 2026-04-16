@@ -1,0 +1,50 @@
+{
+  "company_name": "测试公司",
+  "collection_date": "2026-04-14T14:59:23.938382",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "如何系统地学习算法？ && LeetCode && leetcode题解 && 《算法导论》中算法的C++实现\n 机器学习算法实战\n 深度学习框架\n 如何成为一名算法工程师 && 从小白到入门算法，我...",
+          "source": "网络搜索结果",
+          "url": "https://gist.github.com/hewumars/5429ed18bb8613cdc780dfc6abb0ca31",
+          "reliability": "A",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "专利信息未公开或需要进一步查询",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

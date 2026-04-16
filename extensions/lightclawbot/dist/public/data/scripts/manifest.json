@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-04-10T11:27:01.831Z",
+  "cdnBase": "https://cloudcache.tencent-cloud.com/qcloud/tea/app/data/scripts",
+  "files": {
+    "preflight.sh": {
+      "hashed": "preflight.9af62b39.sh",
+      "hash": "9af62b39",
+      "size": 7262
+    }
+  }
+}

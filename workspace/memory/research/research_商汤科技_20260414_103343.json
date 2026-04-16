@@ -1,0 +1,207 @@
+{
+  "company_name": "商汤科技",
+  "collection_date": "2026-04-14T10:33:43.908216",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "拥有自研深度学习框架，在GitHub上有3个开源项目",
+          "source": "公司官网技术博客",
+          "url": "https://example.com/tech",
+          "reliability": "A",
+          "date": "2024-01-15"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "拥有12项AI相关发明专利，其中5项已授权",
+          "source": "中国专利网",
+          "url": "https://patent.example.com",
+          "reliability": "A",
+          "date": "2023-12-01"
+        },
+        {
+          "aspect": "技术论文",
+          "info": "团队在NeurIPS、ICML发表5篇论文",
+          "source": "arXiv论文库",
+          "url": "https://arxiv.org",
+          "reliability": "B",
+          "date": "2023-11-20"
+        },
+        {
+          "aspect": "GitHub活跃度",
+          "info": "主要开源项目获得1200+ stars，30+ contributors",
+          "source": "GitHub仓库",
+          "url": "https://github.com/company",
+          "reliability": "A",
+          "date": "2024-02-01"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "ARR",
+          "info": "2023年ARR为1.2亿美元，同比增长45%",
+          "source": "公司财报",
+          "url": "https://investor.example.com",
+          "reliability": "A",
+          "date": "2024-02-15"
+        },
+        {
+          "aspect": "用户增长",
+          "info": "MAU从50万增长至200万，季度环比增长25%",
+          "source": "SimilarWeb数据",
+          "url": "https://similarweb.com",
+          "reliability": "B",
+          "date": "2024-01-30"
+        },
+        {
+          "aspect": "获客成本",
+          "info": "CAC为$120，LTV为$800，LTV/CAC比为6.7",
+          "source": "行业分析报告",
+          "url": "https://analyst.com",
+          "reliability": "B",
+          "date": "2023-12-10"
+        },
+        {
+          "aspect": "留存率",
+          "info": "第30日留存率为65%，高于行业平均55%",
+          "source": "第三方数据分析",
+          "url": "https://dataplatform.com",
+          "reliability": "C",
+          "date": "2024-01-20"
+        }
+      ],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "推理成本",
+          "info": "推理成本占收入比重为35%，通过模型优化降低15%",
+          "source": "技术白皮书",
+          "url": "https://whitepaper.example.com",
+          "reliability": "B",
+          "date": "2023-11-15"
+        },
+        {
+          "aspect": "算力储备",
+          "info": "拥有500张A100 GPU，与AWS签订3年算力合同",
+          "source": "招聘信息推断",
+          "url": "https://jobs.example.com",
+          "reliability": "C",
+          "date": "2024-01-10"
+        },
+        {
+          "aspect": "毛利率",
+          "info": "毛利率为68%，较去年同期提升5个百分点",
+          "source": "财务分析师报告",
+          "url": "https://analyst.com/finance",
+          "reliability": "B",
+          "date": "2024-02-01"
+        },
+        {
+          "aspect": "研发投入",
+          "info": "研发费用占收入比重为40%，高于行业平均",
+          "source": "公司财报",
+          "url": "https://investor.example.com",
+          "reliability": "A",
+          "date": "2024-02-15"
+        }
+      ],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "差异化优势",
+          "info": "独家垂直行业数据，形成数据壁垒",
+          "source": "行业分析",
+          "url": "https://industry.com",
+          "reliability": "B",
+          "date": "2024-01-25"
+        },
+        {
+          "aspect": "客户切换成本",
+          "info": "客户平均使用时长18个月，切换成本较高",
+          "source": "客户调研报告",
+          "url": "https://research.com",
+          "reliability": "B",
+          "date": "2023-12-15"
+        },
+        {
+          "aspect": "竞争格局",
+          "info": "在细分市场占有率30%，排名第二",
+          "source": "市场研究报告",
+          "url": "https://marketresearch.com",
+          "reliability": "B",
+          "date": "2024-01-20"
+        },
+        {
+          "aspect": "巨头覆盖风险",
+          "info": "产品功能与巨头有30%重叠，但有独家功能",
+          "source": "产品对比分析",
+          "url": "https://productcompare.com",
+          "reliability": "C",
+          "date": "2024-02-05"
+        }
+      ],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "创始人背景",
+          "info": "创始人曾任职Google AI，斯坦福博士",
+          "source": "LinkedIn资料",
+          "url": "https://linkedin.com/in/founder",
+          "reliability": "A",
+          "date": "2024-01-01"
+        },
+        {
+          "aspect": "技术团队",
+          "info": "CTO为ACM竞赛金牌得主，团队中博士占比40%",
+          "source": "公司官网",
+          "url": "https://example.com/team",
+          "reliability": "A",
+          "date": "2024-01-10"
+        },
+        {
+          "aspect": "工程经验",
+          "info": "核心团队平均有8年工程经验，曾主导多个亿级用户产品",
+          "source": "团队成员履历",
+          "url": "https://example.com/careers",
+          "reliability": "B",
+          "date": "2024-01-15"
+        },
+        {
+          "aspect": "人才结构",
+          "info": "研发人员占比60%，销售占比20%，运营占比20%",
+          "source": "招聘网站数据",
+          "url": "https://zhaopin.com/company",
+          "reliability": "C",
+          "date": "2024-02-01"
+        }
+      ],
+      "reliability": []
+    }
+  },
+  "summary": {
+    "total_info_items": 20,
+    "collection_date": "2026-04-14T10:33:43.908253",
+    "dimension_counts": {
+      "technology": 4,
+      "growth": 4,
+      "cost": 4,
+      "competition": 4,
+      "team": 4
+    }
+  }
+}

@@ -1,0 +1,2058 @@
+{
+  "agent:main:main": {
+    "sessionId": "7572fed3-796c-4dc3-a77b-dd32da362ce5",
+    "updatedAt": 1776332667172,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "chatType": "direct",
+    "origin": {
+      "label": "heartbeat",
+      "provider": "heartbeat",
+      "from": "heartbeat",
+      "to": "heartbeat",
+      "surface": "webchat",
+      "chatType": "direct"
+    },
+    "sessionFile": "/root/.openclaw/agents/main/sessions/7572fed3-796c-4dc3-a77b-dd32da362ce5.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>~/.openclaw/workspace/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-frames</name>\n    <description>Extract frames or short clips from videos using ffmpeg.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agent-browser</name>\n    <description>Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection</description>\n    <location>~/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>find-skills</name>\n    <description>Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.</description>\n    <location>~/.openclaw/workspace/skills/find-skills/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>memory-hygiene</name>\n    <description>Audit, clean, and optimize Clawdbot&apos;s vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.</description>\n    <location>~/.openclaw/workspace/skills/memory-hygiene/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily-search</name>\n    <description>Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.</description>\n    <location>~/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skillhub-preference</name>\n    <description>Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.</description>\n    <location>~/.openclaw/workspace/skills/skillhub-preference/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencent-docs</name>\n    <description>腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及&quot;新建文档&quot;、&quot;创建文档&quot;、&quot;写文档&quot;、&quot;在线文档&quot;、&quot;云文档&quot;、&quot;腾讯文档&quot;、&quot;docs.qq.com&quot;等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。</description>\n    <location>~/.openclaw/workspace/skills/tencent-docs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencentcloud-lighthouse-skill</name>\n    <description>Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring &amp; alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.</description>\n    <location>~/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>web-tools-guide</name>\n    <description>Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。</description>\n    <location>~/.openclaw/workspace/skills/web-tools-guide/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "clawhub",
+          "requiredEnv": []
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "video-frames",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        },
+        {
+          "name": "agent-browser"
+        },
+        {
+          "name": "find-skills"
+        },
+        {
+          "name": "memory-hygiene"
+        },
+        {
+          "name": "tavily-search"
+        },
+        {
+          "name": "skillhub-preference"
+        },
+        {
+          "name": "tencent-docs",
+          "primaryEnv": "TENCENT_DOCS_TOKEN"
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "requiredEnv": []
+        },
+        {
+          "name": "web-tools-guide"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "clawhub",
+          "description": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/root/.openclaw/workspace/skills/github/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/github",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/github/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/github"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "video-frames",
+          "description": "Extract frames or short clips from videos using ffmpeg.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "agent-browser",
+          "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+          "filePath": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "find-skills",
+          "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
+          "filePath": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/find-skills",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/find-skills"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "memory-hygiene",
+          "description": "Audit, clean, and optimize Clawdbot's vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.",
+          "filePath": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily-search",
+          "description": "Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.",
+          "filePath": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skillhub-preference",
+          "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+          "filePath": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencent-docs",
+          "description": "腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及\"新建文档\"、\"创建文档\"、\"写文档\"、\"在线文档\"、\"云文档\"、\"腾讯文档\"、\"docs.qq.com\"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。",
+          "filePath": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencent-docs",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencent-docs"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "description": "Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring & alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.",
+          "filePath": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "web-tools-guide",
+          "description": "Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。",
+          "filePath": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "status": "done",
+    "startedAt": 1776332650054,
+    "modelProvider": "deepseek",
+    "model": "deepseek-reasoner",
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776332649992,
+      "sessionId": "7572fed3-796c-4dc3-a77b-dd32da362ce5",
+      "sessionKey": "agent:main:main",
+      "provider": "deepseek",
+      "model": "deepseek-reasoner",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 31835,
+        "projectContextChars": 14032,
+        "nonProjectContextChars": 17803
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8424,
+          "injectedChars": 8424,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 7379,
+        "entries": [
+          {
+            "name": "clawhub",
+            "blockChars": 490
+          },
+          {
+            "name": "github",
+            "blockChars": 280
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 549
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 599
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 817
+          },
+          {
+            "name": "tmux",
+            "blockChars": 313
+          },
+          {
+            "name": "video-frames",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 474
+          },
+          {
+            "name": "agent-browser",
+            "blockChars": 288
+          },
+          {
+            "name": "find-skills",
+            "blockChars": 392
+          },
+          {
+            "name": "memory-hygiene",
+            "blockChars": 360
+          },
+          {
+            "name": "tavily-search",
+            "blockChars": 451
+          },
+          {
+            "name": "skillhub-preference",
+            "blockChars": 342
+          },
+          {
+            "name": "tencent-docs",
+            "blockChars": 507
+          },
+          {
+            "name": "tencentcloud-lighthouse-skill",
+            "blockChars": 464
+          },
+          {
+            "name": "web-tools-guide",
+            "blockChars": 352
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 16400,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "inputTokens": 532,
+    "outputTokens": 351,
+    "cacheRead": 120768,
+    "cacheWrite": 0,
+    "estimatedCostUsd": 0,
+    "totalTokens": 121000,
+    "totalTokensFresh": true,
+    "deliveryContext": {
+      "to": "heartbeat"
+    },
+    "lastTo": "heartbeat",
+    "endedAt": 1776332667149,
+    "runtimeMs": 17095
+  },
+  "agent:main:openclaw-weixin:direct:o9cq80znkfppgbzm9ww1falxr5mk@im.wechat": {
+    "origin": {
+      "label": "o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "provider": "heartbeat",
+      "chatType": "direct",
+      "from": "o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "to": "o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "accountId": "d139042d5996-im-bot"
+    },
+    "sessionId": "e015da7b-f494-41f7-997f-631be66b267a",
+    "updatedAt": 1776234006496,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "chatType": "direct",
+    "deliveryContext": {
+      "channel": "openclaw-weixin",
+      "to": "o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "accountId": "d139042d5996-im-bot"
+    },
+    "lastChannel": "openclaw-weixin",
+    "lastTo": "o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+    "lastAccountId": "d139042d5996-im-bot",
+    "sessionFile": "/root/.openclaw/agents/main/sessions/e015da7b-f494-41f7-997f-631be66b267a.jsonl",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>lightclawbot-cron</name>\n    <description>仅限 lightclawbot 通道使用。LightClawBot 定时任务提醒，支持一次性提醒、周期性任务，可设置、查询、取消提醒。当消息来源不是 lightclawbot 时，禁止调用本技能。</description>\n    <location>~/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>~/.openclaw/workspace/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-frames</name>\n    <description>Extract frames or short clips from videos using ffmpeg.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agent-browser</name>\n    <description>Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection</description>\n    <location>~/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>find-skills</name>\n    <description>Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.</description>\n    <location>~/.openclaw/workspace/skills/find-skills/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>investment-xhs</name>\n    <description>完全自主的小红书投资分析报告内容策划。为每天一家AI科技公司生成深度投资分析报告,涵盖技术、增长、成本、竞争、团队五个维度,并生成小红书爆款标题、HTML渲染报告、文案摘要和标签。触发条件:当用户提到&quot;小红书投资分析报告内容策划&quot;、&quot;AI科技公司投资分析&quot;、&quot;生成投资分析报告&quot;或类似请求时使用此技能。</description>\n    <location>~/.openclaw/workspace/skills/investment-xhs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>memory-hygiene</name>\n    <description>Audit, clean, and optimize Clawdbot&apos;s vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.</description>\n    <location>~/.openclaw/workspace/skills/memory-hygiene/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily-search</name>\n    <description>Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.</description>\n    <location>~/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skillhub-preference</name>\n    <description>Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.</description>\n    <location>~/.openclaw/workspace/skills/skillhub-preference/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily</name>\n    <description>AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources.</description>\n    <location>~/.openclaw/workspace/skills/tavily/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencent-docs</name>\n    <description>腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及&quot;新建文档&quot;、&quot;创建文档&quot;、&quot;写文档&quot;、&quot;在线文档&quot;、&quot;云文档&quot;、&quot;腾讯文档&quot;、&quot;docs.qq.com&quot;等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。</description>\n    <location>~/.openclaw/workspace/skills/tencent-docs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencentcloud-lighthouse-skill</name>\n    <description>Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring &amp; alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.</description>\n    <location>~/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>web-tools-guide</name>\n    <description>Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。</description>\n    <location>~/.openclaw/workspace/skills/web-tools-guide/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "lightclawbot-cron",
+          "requiredEnv": []
+        },
+        {
+          "name": "clawhub",
+          "requiredEnv": []
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "video-frames",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        },
+        {
+          "name": "agent-browser"
+        },
+        {
+          "name": "find-skills"
+        },
+        {
+          "name": "investment-xhs"
+        },
+        {
+          "name": "memory-hygiene"
+        },
+        {
+          "name": "tavily-search"
+        },
+        {
+          "name": "skillhub-preference"
+        },
+        {
+          "name": "tavily"
+        },
+        {
+          "name": "tencent-docs",
+          "primaryEnv": "TENCENT_DOCS_TOKEN"
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "requiredEnv": []
+        },
+        {
+          "name": "web-tools-guide"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "lightclawbot-cron",
+          "description": "仅限 lightclawbot 通道使用。LightClawBot 定时任务提醒，支持一次性提醒、周期性任务，可设置、查询、取消提醒。当消息来源不是 lightclawbot 时，禁止调用本技能。",
+          "filePath": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md",
+          "baseDir": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron",
+          "source": "openclaw-extra",
+          "sourceInfo": {
+            "path": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md",
+            "source": "openclaw-extra",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawhub",
+          "description": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/root/.openclaw/workspace/skills/github/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/github",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/github/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/github"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "video-frames",
+          "description": "Extract frames or short clips from videos using ffmpeg.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "agent-browser",
+          "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+          "filePath": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "find-skills",
+          "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
+          "filePath": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/find-skills",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/find-skills"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "investment-xhs",
+          "description": "完全自主的小红书投资分析报告内容策划。为每天一家AI科技公司生成深度投资分析报告,涵盖技术、增长、成本、竞争、团队五个维度,并生成小红书爆款标题、HTML渲染报告、文案摘要和标签。触发条件:当用户提到\"小红书投资分析报告内容策划\"、\"AI科技公司投资分析\"、\"生成投资分析报告\"或类似请求时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/investment-xhs/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/investment-xhs",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/investment-xhs/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/investment-xhs"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "memory-hygiene",
+          "description": "Audit, clean, and optimize Clawdbot's vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.",
+          "filePath": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily-search",
+          "description": "Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.",
+          "filePath": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skillhub-preference",
+          "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+          "filePath": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily",
+          "description": "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources.",
+          "filePath": "/root/.openclaw/workspace/skills/tavily/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tavily",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tavily/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tavily"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencent-docs",
+          "description": "腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及\"新建文档\"、\"创建文档\"、\"写文档\"、\"在线文档\"、\"云文档\"、\"腾讯文档\"、\"docs.qq.com\"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。",
+          "filePath": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencent-docs",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencent-docs"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "description": "Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring & alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.",
+          "filePath": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "web-tools-guide",
+          "description": "Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。",
+          "filePath": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "status": "done",
+    "startedAt": 1776233974989,
+    "modelProvider": "deepseek",
+    "model": "deepseek-reasoner",
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776233974974,
+      "sessionId": "e015da7b-f494-41f7-997f-631be66b267a",
+      "sessionKey": "agent:main:openclaw-weixin:direct:o9cq80znkfppgbzm9ww1falxr5mk@im.wechat",
+      "provider": "deepseek",
+      "model": "deepseek-reasoner",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 32998,
+        "projectContextChars": 14032,
+        "nonProjectContextChars": 18966
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8424,
+          "injectedChars": 8424,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 8532,
+        "entries": [
+          {
+            "name": "lightclawbot-cron",
+            "blockChars": 275
+          },
+          {
+            "name": "clawhub",
+            "blockChars": 490
+          },
+          {
+            "name": "github",
+            "blockChars": 280
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 549
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 599
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 817
+          },
+          {
+            "name": "tmux",
+            "blockChars": 313
+          },
+          {
+            "name": "video-frames",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 474
+          },
+          {
+            "name": "agent-browser",
+            "blockChars": 288
+          },
+          {
+            "name": "find-skills",
+            "blockChars": 392
+          },
+          {
+            "name": "investment-xhs",
+            "blockChars": 341
+          },
+          {
+            "name": "memory-hygiene",
+            "blockChars": 360
+          },
+          {
+            "name": "tavily-search",
+            "blockChars": 451
+          },
+          {
+            "name": "skillhub-preference",
+            "blockChars": 342
+          },
+          {
+            "name": "tavily",
+            "blockChars": 528
+          },
+          {
+            "name": "tencent-docs",
+            "blockChars": 507
+          },
+          {
+            "name": "tencentcloud-lighthouse-skill",
+            "blockChars": 464
+          },
+          {
+            "name": "web-tools-guide",
+            "blockChars": 352
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 16400,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "cacheRead": 47680,
+    "cacheWrite": 0,
+    "totalTokensFresh": true,
+    "compactionCount": 0,
+    "contextTokens": 200000,
+    "inputTokens": 43527,
+    "outputTokens": 447,
+    "estimatedCostUsd": 0,
+    "totalTokens": 47863,
+    "endedAt": 1776234006482,
+    "runtimeMs": 31493
+  },
+  "agent:main:openclaw-weixin:group:o9cq80znkfppgbzm9ww1falxr5mk@im.wechat": {
+    "chatType": "group",
+    "channel": "openclaw-weixin",
+    "groupId": "o9cq80znkfppgbzm9ww1falxr5mk@im.wechat",
+    "displayName": "openclaw-weixin:g-o9cq80znkfppgbzm9ww1falxr5mk@im.wechat",
+    "origin": {
+      "label": "openclaw-weixin:group:o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "provider": "openclaw-weixin",
+      "surface": "openclaw-weixin",
+      "chatType": "group",
+      "from": "openclaw-weixin:group:o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "to": "channel:o9cq80znKfPpGBZm9WW1fALxr5mk@im.wechat",
+      "accountId": "d139042d5996-im-bot"
+    },
+    "sessionId": "627a33c9-3489-40fb-9c45-07da4d47bd57",
+    "updatedAt": 1776133960089,
+    "deliveryContext": {
+      "channel": "openclaw-weixin"
+    },
+    "lastChannel": "openclaw-weixin",
+    "sessionFile": "/root/.openclaw/agents/main/sessions/627a33c9-3489-40fb-9c45-07da4d47bd57.jsonl"
+  },
+  "agent:main:lightclawbot:direct:100048059493": {
+    "sessionId": "39c4ff15-fa05-4fd6-bcee-4a07be189010",
+    "updatedAt": 1776148079227,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "chatType": "direct",
+    "deliveryContext": {
+      "channel": "lightclawbot",
+      "to": "user:100048059493",
+      "accountId": "default"
+    },
+    "lastChannel": "lightclawbot",
+    "lastTo": "user:100048059493",
+    "lastAccountId": "default",
+    "origin": {
+      "label": "user:100048059493",
+      "provider": "heartbeat",
+      "surface": "lightclawbot",
+      "chatType": "direct",
+      "from": "user:100048059493",
+      "to": "user:100048059493",
+      "accountId": "default"
+    },
+    "sessionFile": "/root/.openclaw/agents/main/sessions/39c4ff15-fa05-4fd6-bcee-4a07be189010.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>lightclawbot-cron</name>\n    <description>仅限 lightclawbot 通道使用。LightClawBot 定时任务提醒，支持一次性提醒、周期性任务，可设置、查询、取消提醒。当消息来源不是 lightclawbot 时，禁止调用本技能。</description>\n    <location>~/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>~/.openclaw/workspace/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-frames</name>\n    <description>Extract frames or short clips from videos using ffmpeg.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agent-browser</name>\n    <description>Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection</description>\n    <location>~/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>find-skills</name>\n    <description>Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.</description>\n    <location>~/.openclaw/workspace/skills/find-skills/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>investment-xhs</name>\n    <description>完全自主的小红书投资分析报告内容策划。为每天一家AI科技公司生成深度投资分析报告，涵盖技术、增长、成本、竞争、团队五个维度，并生成小红书爆款标题、HTML渲染报告、文案摘要和标签。触发条件：当用户提到“小红书投资分析报告内容策划”、“AI科技公司投资分析”、“生成投资分析报告”或类似请求时使用此技能。</description>\n    <location>~/.openclaw/workspace/skills/investment-xhs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>memory-hygiene</name>\n    <description>Audit, clean, and optimize Clawdbot&apos;s vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.</description>\n    <location>~/.openclaw/workspace/skills/memory-hygiene/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily-search</name>\n    <description>Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.</description>\n    <location>~/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skillhub-preference</name>\n    <description>Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.</description>\n    <location>~/.openclaw/workspace/skills/skillhub-preference/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily</name>\n    <description>AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources.</description>\n    <location>~/.openclaw/workspace/skills/tavily/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencent-docs</name>\n    <description>腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及&quot;新建文档&quot;、&quot;创建文档&quot;、&quot;写文档&quot;、&quot;在线文档&quot;、&quot;云文档&quot;、&quot;腾讯文档&quot;、&quot;docs.qq.com&quot;等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。</description>\n    <location>~/.openclaw/workspace/skills/tencent-docs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tencentcloud-lighthouse-skill</name>\n    <description>Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring &amp; alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.</description>\n    <location>~/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>web-tools-guide</name>\n    <description>Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。</description>\n    <location>~/.openclaw/workspace/skills/web-tools-guide/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "lightclawbot-cron",
+          "requiredEnv": []
+        },
+        {
+          "name": "clawhub",
+          "requiredEnv": []
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "video-frames",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        },
+        {
+          "name": "agent-browser"
+        },
+        {
+          "name": "find-skills"
+        },
+        {
+          "name": "investment-xhs"
+        },
+        {
+          "name": "memory-hygiene"
+        },
+        {
+          "name": "tavily-search"
+        },
+        {
+          "name": "skillhub-preference"
+        },
+        {
+          "name": "tavily"
+        },
+        {
+          "name": "tencent-docs",
+          "primaryEnv": "TENCENT_DOCS_TOKEN"
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "requiredEnv": []
+        },
+        {
+          "name": "web-tools-guide"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "lightclawbot-cron",
+          "description": "仅限 lightclawbot 通道使用。LightClawBot 定时任务提醒，支持一次性提醒、周期性任务，可设置、查询、取消提醒。当消息来源不是 lightclawbot 时，禁止调用本技能。",
+          "filePath": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md",
+          "baseDir": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron",
+          "source": "openclaw-extra",
+          "sourceInfo": {
+            "path": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron/SKILL.md",
+            "source": "openclaw-extra",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/extensions/lightclawbot/skills/lightclaw-cron"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawhub",
+          "description": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/clawhub"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/root/.openclaw/workspace/skills/github/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/github",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/github/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/github"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "video-frames",
+          "description": "Extract frames or short clips from videos using ffmpeg.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/video-frames"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.local/share/pnpm/global/5/.pnpm/openclaw@2026.4.8_@napi-rs+canvas@0.1.97/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "agent-browser",
+          "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+          "filePath": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/agent-browser-clawdbot/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/agent-browser-clawdbot"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "find-skills",
+          "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
+          "filePath": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/find-skills",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/find-skills/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/find-skills"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "investment-xhs",
+          "description": "完全自主的小红书投资分析报告内容策划。为每天一家AI科技公司生成深度投资分析报告，涵盖技术、增长、成本、竞争、团队五个维度，并生成小红书爆款标题、HTML渲染报告、文案摘要和标签。触发条件：当用户提到“小红书投资分析报告内容策划”、“AI科技公司投资分析”、“生成投资分析报告”或类似请求时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/investment-xhs/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/investment-xhs",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/investment-xhs/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/investment-xhs"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "memory-hygiene",
+          "description": "Audit, clean, and optimize Clawdbot's vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation.",
+          "filePath": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/memory-hygiene/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/memory-hygiene"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily-search",
+          "description": "Web search via Tavily API (alternative to Brave). Use when the user asks to search the web / look up sources / find links and Brave web_search is unavailable or undesired. Returns a small set of relevant results (title, url, snippet) and can optionally include short answer summaries.",
+          "filePath": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/openclaw-tavily-search/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/openclaw-tavily-search"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skillhub-preference",
+          "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+          "filePath": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/skillhub-preference/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/skillhub-preference"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily",
+          "description": "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption with clean structured results, answer generation, and raw content extraction. Best for research tasks, news queries, fact-checking, and gathering authoritative sources.",
+          "filePath": "/root/.openclaw/workspace/skills/tavily/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tavily",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tavily/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tavily"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencent-docs",
+          "description": "腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及\"新建文档\"、\"创建文档\"、\"写文档\"、\"在线文档\"、\"云文档\"、\"腾讯文档\"、\"docs.qq.com\"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）。",
+          "filePath": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencent-docs",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencent-docs/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencent-docs"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tencentcloud-lighthouse-skill",
+          "description": "Manage Tencent Cloud Lighthouse (轻量应用服务器) — auto-setup mcporter + MCP, query instances, monitoring & alerting, self-diagnostics, firewall, snapshots, remote command execution (TAT). Use when user asks about Lighthouse or 轻量应用服务器. NOT for CVM or other cloud server types.",
+          "filePath": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/tencentcloud-lighthouse-skill"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "web-tools-guide",
+          "description": "Web 工具策略指南。MUST trigger when 用户提到：搜索/上网/查资料/打开网站/抓取网页/获取网络信息/新闻/热点/web search/web fetch/browser use/浏览器自动化/JS 渲染页面，或需要使用 web_search/web_fetch/browser 工具时。按 search → fetch → browser 三级策略选择工具。",
+          "filePath": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspace/skills/web-tools-guide/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspace/skills/web-tools-guide"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "status": "done",
+    "startedAt": 1776148057103,
+    "modelProvider": "deepseek",
+    "model": "deepseek-reasoner",
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776148056969,
+      "sessionId": "39c4ff15-fa05-4fd6-bcee-4a07be189010",
+      "sessionKey": "agent:main:lightclawbot:direct:100048059493",
+      "provider": "deepseek",
+      "model": "deepseek-reasoner",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 32968,
+        "projectContextChars": 14032,
+        "nonProjectContextChars": 18936
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8424,
+          "injectedChars": 8424,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 8502,
+        "entries": [
+          {
+            "name": "lightclawbot-cron",
+            "blockChars": 275
+          },
+          {
+            "name": "clawhub",
+            "blockChars": 490
+          },
+          {
+            "name": "github",
+            "blockChars": 280
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 549
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 599
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 817
+          },
+          {
+            "name": "tmux",
+            "blockChars": 313
+          },
+          {
+            "name": "video-frames",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 474
+          },
+          {
+            "name": "agent-browser",
+            "blockChars": 288
+          },
+          {
+            "name": "find-skills",
+            "blockChars": 392
+          },
+          {
+            "name": "investment-xhs",
+            "blockChars": 311
+          },
+          {
+            "name": "memory-hygiene",
+            "blockChars": 360
+          },
+          {
+            "name": "tavily-search",
+            "blockChars": 451
+          },
+          {
+            "name": "skillhub-preference",
+            "blockChars": 342
+          },
+          {
+            "name": "tavily",
+            "blockChars": 528
+          },
+          {
+            "name": "tencent-docs",
+            "blockChars": 507
+          },
+          {
+            "name": "tencentcloud-lighthouse-skill",
+            "blockChars": 464
+          },
+          {
+            "name": "web-tools-guide",
+            "blockChars": 352
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 16400,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "inputTokens": 15656,
+    "outputTokens": 771,
+    "cacheRead": 86976,
+    "cacheWrite": 0,
+    "estimatedCostUsd": 0,
+    "totalTokens": 87210,
+    "totalTokensFresh": true,
+    "endedAt": 1776148079212,
+    "runtimeMs": 22109
+  },
+  "agent:main:lightclawbot:group:100048059493": {
+    "chatType": "group",
+    "channel": "lightclawbot",
+    "groupId": "100048059493",
+    "displayName": "lightclawbot:g-100048059493",
+    "origin": {
+      "label": "lightclawbot:group:100048059493",
+      "provider": "lightclawbot",
+      "surface": "lightclawbot",
+      "chatType": "group",
+      "from": "lightclawbot:group:100048059493",
+      "to": "channel:100048059493",
+      "accountId": "default"
+    },
+    "sessionId": "5c3253da-50f0-4e04-a3c1-ddd3e83604bd",
+    "updatedAt": 1776147236827,
+    "deliveryContext": {
+      "channel": "lightclawbot"
+    },
+    "lastChannel": "lightclawbot",
+    "sessionFile": "/root/.openclaw/agents/main/sessions/5c3253da-50f0-4e04-a3c1-ddd3e83604bd.jsonl"
+  }
+}

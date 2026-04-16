@@ -1,0 +1,11 @@
+node_modules/
+browser-existing-session/
+logs/
+state/
+*.bak
+*.bak.*
+credentials/
+identity/
+canvas/
+delivery-queue/
+update-check.json

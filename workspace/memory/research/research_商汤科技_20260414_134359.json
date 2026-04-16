@@ -1,0 +1,50 @@
+{
+  "company_name": "商汤科技",
+  "collection_date": "2026-04-14T13:43:38.437166",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "| DeepVision | 稚晖君 (peng-zhihui) | GitHub | 本项目实现了移动端CV算法快速验证框架，旨在提供一套通用的CV算法验证框架。框架经过本人一年多的开发和维护，目前...",
+          "source": "网络搜索结果",
+          "url": "https://github.com/sensetime",
+          "reliability": "A",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "专利信息未公开或需要进一步查询",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

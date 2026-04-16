@@ -1,0 +1,804 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-15T03:43:17.632922",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "技术能力",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 自研AI技术 专利</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 自研AI技术 专利",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 自研AI技术 专利 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 自研AI技术 专利",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 自研AI技术 专利</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 自研AI技术 专利",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 自研AI技术 专利 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 自研AI技术 专利",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 深度学习框架 GitHub</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 深度学习框架 GitHub",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 深度学习框架 GitHub",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 深度学习框架 GitHub 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 深度学习框架 GitHub",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 深度学习框架 GitHub",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 深度学习框架 GitHub</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 深度学习框架 GitHub",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 深度学习框架 GitHub",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 深度学习框架 GitHub 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 深度学习框架 GitHub",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 深度学习框架 GitHub",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 AI算法 论文发表</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 AI算法 论文发表",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 AI算法 论文发表",
+          "is_real_data": true
+        },
+        {
+          "aspect": "技术能力",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 AI算法 论文发表 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 AI算法 论文发表",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 AI算法 论文发表",
+          "is_real_data": true
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "增长情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 年度收入 ARR</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 年度收入 ARR",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 年度收入 ARR",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 年度收入 ARR 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 年度收入 ARR",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 年度收入 ARR",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 年度收入 ARR</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 年度收入 ARR",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 年度收入 ARR",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 年度收入 ARR 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 年度收入 ARR",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 年度收入 ARR",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 用户增长 MAU</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 用户增长 MAU",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 用户增长 MAU",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 用户增长 MAU 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 用户增长 MAU",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 用户增长 MAU",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 用户增长 MAU</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 用户增长 MAU",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 用户增长 MAU",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 用户增长 MAU 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 用户增长 MAU",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 用户增长 MAU",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 融资情况 投资者</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 融资情况 投资者",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 融资情况 投资者",
+          "is_real_data": true
+        },
+        {
+          "aspect": "增长情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 融资情况 投资者 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 融资情况 投资者",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 融资情况 投资者",
+          "is_real_data": true
+        }
+      ],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "成本情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 运营成本 毛利率</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 运营成本 毛利率",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 运营成本 毛利率",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 运营成本 毛利率 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 运营成本 毛利率",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 运营成本 毛利率",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 运营成本 毛利率</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 运营成本 毛利率",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 运营成本 毛利率",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 运营成本 毛利率 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 运营成本 毛利率",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 运营成本 毛利率",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 GPU算力 云计算</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 GPU算力 云计算",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 GPU算力 云计算",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 GPU算力 云计算 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 GPU算力 云计算",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 GPU算力 云计算",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 GPU算力 云计算</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 GPU算力 云计算",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 GPU算力 云计算",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 GPU算力 云计算 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 GPU算力 云计算",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 GPU算力 云计算",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 研发投入 费用</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 研发投入 费用",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 研发投入 费用",
+          "is_real_data": true
+        },
+        {
+          "aspect": "成本情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 研发投入 费用 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 研发投入 费用",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 研发投入 费用",
+          "is_real_data": true
+        }
+      ],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "竞争情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 竞争对手 市场定位</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 竞争对手 市场定位",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 竞争对手 市场定位",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 竞争对手 市场定位 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 竞争对手 市场定位",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 竞争对手 市场定位",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 竞争对手 市场定位</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 竞争对手 市场定位",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 竞争对手 市场定位",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 竞争对手 市场定位 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 竞争对手 市场定位",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 竞争对手 市场定位",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 差异化优势</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 差异化优势",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 差异化优势",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 差异化优势 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 差异化优势",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 差异化优势",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 差异化优势</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 差异化优势",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 差异化优势",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 差异化优势 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 差异化优势",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 差异化优势",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 行业竞争格局</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 行业竞争格局",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 行业竞争格局",
+          "is_real_data": true
+        },
+        {
+          "aspect": "竞争情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 行业竞争格局 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 行业竞争格局",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 行业竞争格局",
+          "is_real_data": true
+        }
+      ],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "团队情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 创始人 背景</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 创始人 背景",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 创始人 背景",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 创始人 背景 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 创始人 背景",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 创始人 背景",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 创始人 背景</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 创始人 背景",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 创始人 背景",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 创始人 背景 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 创始人 背景",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 创始人 背景",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 CTO 技术总监</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 CTO 技术总监",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 CTO 技术总监",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 CTO 技术总监 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 CTO 技术总监",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 CTO 技术总监",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result2?q=月之暗面 CTO 技术总监</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 CTO 技术总监",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 CTO 技术总监",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<p>这是URL为 https://search.example.com/result2?q=月之暗面 CTO 技术总监 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result2?q=月之暗面 CTO 技术总监",
+          "date": "2026-04-08",
+          "reliability": "C",
+          "search_query": "月之暗面 CTO 技术总监",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<head><title>模拟页面 - https://search.example.com/result1?q=月之暗面 核心团队</title></head>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 核心团队",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 核心团队",
+          "is_real_data": true
+        },
+        {
+          "aspect": "团队情况",
+          "info": "<p>这是URL为 https://search.example.com/result1?q=月之暗面 核心团队 的模拟网页内容。</p>",
+          "source": "模拟搜索引擎",
+          "url": "https://search.example.com/result1?q=月之暗面 核心团队",
+          "date": "2026-04-15",
+          "reliability": "C",
+          "search_query": "月之暗面 核心团队",
+          "is_real_data": true
+        }
+      ],
+      "reliability": []
+    }
+  },
+  "search_queries": {
+    "technology": [
+      "月之暗面 自研AI技术 专利",
+      "月之暗面 深度学习框架 GitHub",
+      "月之暗面 AI算法 论文发表",
+      "月之暗面 AI technology"
+    ],
+    "growth": [
+      "月之暗面 年度收入 ARR",
+      "月之暗面 用户增长 MAU",
+      "月之暗面 融资情况 投资者",
+      "月之暗面 revenue"
+    ],
+    "cost": [
+      "月之暗面 运营成本 毛利率",
+      "月之暗面 GPU算力 云计算",
+      "月之暗面 研发投入 费用",
+      "月之暗面 cost"
+    ],
+    "competition": [
+      "月之暗面 竞争对手 市场定位",
+      "月之暗面 差异化优势",
+      "月之暗面 行业竞争格局",
+      "月之暗面 competition"
+    ],
+    "team": [
+      "月之暗面 创始人 背景",
+      "月之暗面 CTO 技术总监",
+      "月之暗面 核心团队",
+      "月之暗面 team"
+    ]
+  },
+  "raw_data": {
+    "technology": [
+      {
+        "title": "关于搜索\"月之暗面 自研AI技术 专利\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 自研AI技术 专利",
+        "snippet": "这是关于\"月之暗面 自研AI技术 专利\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 自研AI技术 专利\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 自研AI技术 专利",
+        "snippet": "这是关于\"月之暗面 自研AI技术 专利\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 深度学习框架 GitHub\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 深度学习框架 GitHub",
+        "snippet": "这是关于\"月之暗面 深度学习框架 GitHub\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 深度学习框架 GitHub\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 深度学习框架 GitHub",
+        "snippet": "这是关于\"月之暗面 深度学习框架 GitHub\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 AI算法 论文发表\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 AI算法 论文发表",
+        "snippet": "这是关于\"月之暗面 AI算法 论文发表\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 AI算法 论文发表\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 AI算法 论文发表",
+        "snippet": "这是关于\"月之暗面 AI算法 论文发表\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      }
+    ],
+    "growth": [
+      {
+        "title": "关于搜索\"月之暗面 年度收入 ARR\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 年度收入 ARR",
+        "snippet": "这是关于\"月之暗面 年度收入 ARR\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 年度收入 ARR\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 年度收入 ARR",
+        "snippet": "这是关于\"月之暗面 年度收入 ARR\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 用户增长 MAU\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 用户增长 MAU",
+        "snippet": "这是关于\"月之暗面 用户增长 MAU\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 用户增长 MAU\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 用户增长 MAU",
+        "snippet": "这是关于\"月之暗面 用户增长 MAU\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 融资情况 投资者\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 融资情况 投资者",
+        "snippet": "这是关于\"月之暗面 融资情况 投资者\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 融资情况 投资者\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 融资情况 投资者",
+        "snippet": "这是关于\"月之暗面 融资情况 投资者\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      }
+    ],
+    "cost": [
+      {
+        "title": "关于搜索\"月之暗面 运营成本 毛利率\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 运营成本 毛利率",
+        "snippet": "这是关于\"月之暗面 运营成本 毛利率\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 运营成本 毛利率\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 运营成本 毛利率",
+        "snippet": "这是关于\"月之暗面 运营成本 毛利率\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 GPU算力 云计算\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 GPU算力 云计算",
+        "snippet": "这是关于\"月之暗面 GPU算力 云计算\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 GPU算力 云计算\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 GPU算力 云计算",
+        "snippet": "这是关于\"月之暗面 GPU算力 云计算\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 研发投入 费用\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 研发投入 费用",
+        "snippet": "这是关于\"月之暗面 研发投入 费用\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 研发投入 费用\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 研发投入 费用",
+        "snippet": "这是关于\"月之暗面 研发投入 费用\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      }
+    ],
+    "competition": [
+      {
+        "title": "关于搜索\"月之暗面 竞争对手 市场定位\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 竞争对手 市场定位",
+        "snippet": "这是关于\"月之暗面 竞争对手 市场定位\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 竞争对手 市场定位\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 竞争对手 市场定位",
+        "snippet": "这是关于\"月之暗面 竞争对手 市场定位\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 差异化优势\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 差异化优势",
+        "snippet": "这是关于\"月之暗面 差异化优势\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 差异化优势\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 差异化优势",
+        "snippet": "这是关于\"月之暗面 差异化优势\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 行业竞争格局\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 行业竞争格局",
+        "snippet": "这是关于\"月之暗面 行业竞争格局\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 行业竞争格局\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 行业竞争格局",
+        "snippet": "这是关于\"月之暗面 行业竞争格局\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      }
+    ],
+    "team": [
+      {
+        "title": "关于搜索\"月之暗面 创始人 背景\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 创始人 背景",
+        "snippet": "这是关于\"月之暗面 创始人 背景\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 创始人 背景\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 创始人 背景",
+        "snippet": "这是关于\"月之暗面 创始人 背景\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 CTO 技术总监\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 CTO 技术总监",
+        "snippet": "这是关于\"月之暗面 CTO 技术总监\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 CTO 技术总监\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 CTO 技术总监",
+        "snippet": "这是关于\"月之暗面 CTO 技术总监\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      },
+      {
+        "title": "关于搜索\"月之暗面 核心团队\"的结果1",
+        "url": "https://search.example.com/result1?q=月之暗面 核心团队",
+        "snippet": "这是关于\"月之暗面 核心团队\"的搜索结果摘要...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-15"
+      },
+      {
+        "title": "关于搜索\"月之暗面 核心团队\"的结果2",
+        "url": "https://search.example.com/result2?q=月之暗面 核心团队",
+        "snippet": "这是关于\"月之暗面 核心团队\"的更多信息...",
+        "source": "模拟搜索引擎",
+        "date": "2026-04-08"
+      }
+    ]
+  },
+  "summary": {
+    "total_info_items": 60,
+    "collection_date": "2026-04-15T03:43:34.392852",
+    "dimension_counts": {
+      "technology": 12,
+      "growth": 12,
+      "cost": 12,
+      "competition": 12,
+      "team": 12
+    },
+    "search_provider": "http",
+    "is_real_data": true
+  },
+  "search_provider": "auto"
+}

@@ -1,0 +1,352 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-14T12:56:14.587191",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "<p>这是一家专注于人工智能技术的公司，在计算机视觉和自然语言处理领域有深厚积累。</p>",
+          "source": "科技新闻",
+          "url": "https://technews.example.com/月之暗面",
+          "date": "2026-04-14",
+          "reliability": "C",
+          "reliability_explanation": "未知来源，默认中等可靠性",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "confidence": 0.7
+        },
+        {
+          "aspect": "自研能力",
+          "info": "<p>公司拥有多项技术专利，研发团队来自知名高校和企业。</p>",
+          "source": "科技新闻",
+          "url": "https://technews.example.com/月之暗面",
+          "date": "2026-04-14",
+          "reliability": "C",
+          "reliability_explanation": "未知来源，默认中等可靠性",
+          "search_query": "月之暗面 自研AI技术 专利",
+          "confidence": 0.7
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "团队结构",
+          "info": "<p>公司拥有多项技术专利，研发团队来自知名高校和企业。</p>",
+          "source": "科技新闻",
+          "url": "https://technews.example.com/月之暗面",
+          "date": "2026-04-14",
+          "reliability": "C",
+          "reliability_explanation": "未知来源，默认中等可靠性",
+          "search_query": "月之暗面 创始人 背景",
+          "confidence": 0.7
+        }
+      ],
+      "reliability": []
+    }
+  },
+  "search_queries": {
+    "technology": [
+      "月之暗面 自研AI技术 专利",
+      "月之暗面 深度学习框架 GitHub",
+      "月之暗面 AI算法 论文发表",
+      "月之暗面 技术团队 背景",
+      "月之暗面 AI technology"
+    ],
+    "growth": [
+      "月之暗面 年度收入 ARR",
+      "月之暗面 用户增长 MAU",
+      "月之暗面 融资情况 投资者",
+      "月之暗面 市场份额",
+      "月之暗面 revenue"
+    ],
+    "cost": [
+      "月之暗面 运营成本 毛利率",
+      "月之暗面 GPU算力 云计算",
+      "月之暗面 研发投入 费用",
+      "月之暗面 成本结构",
+      "月之暗面 cost"
+    ],
+    "competition": [
+      "月之暗面 竞争对手 市场定位",
+      "月之暗面 差异化优势",
+      "月之暗面 行业竞争格局",
+      "月之暗面 vs 竞争对手",
+      "月之暗面 competition"
+    ],
+    "team": [
+      "月之暗面 创始人 背景",
+      "月之暗面 CTO 技术总监",
+      "月之暗面 核心团队",
+      "月之暗面 招聘 人才结构",
+      "月之暗面 team"
+    ]
+  },
+  "raw_data": {
+    "technology": [
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      }
+    ],
+    "growth": [
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      }
+    ],
+    "cost": [
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      }
+    ],
+    "competition": [
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      }
+    ],
+    "team": [
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      },
+      {
+        "title": "关于月之暗面的技术报道",
+        "url": "https://technews.example.com/月之暗面",
+        "snippet": "月之暗面在AI技术领域取得突破...",
+        "source": "科技新闻",
+        "date": "2026-04-14"
+      },
+      {
+        "title": "月之暗面融资新闻",
+        "url": "https://finance.example.com/月之暗面",
+        "snippet": "月之暗面近日完成新一轮融资...",
+        "source": "财经媒体",
+        "date": "2026-04-07"
+      }
+    ]
+  },
+  "summary": {
+    "total_info_items": 3,
+    "collection_date": "2026-04-14T12:56:31.095160",
+    "dimension_counts": {
+      "technology": 2,
+      "growth": 0,
+      "cost": 0,
+      "competition": 0,
+      "team": 1
+    },
+    "reliability_summary": {
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "percentages": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 100.0,
+        "D": 0.0
+      },
+      "average_score": 2.0,
+      "overall_reliability": "C"
+    }
+  }
+}

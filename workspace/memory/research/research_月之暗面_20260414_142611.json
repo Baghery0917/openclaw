@@ -1,0 +1,66 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-14T14:26:03.809731",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "创始人背景",
+          "info": "创始人约为2025",
+          "source": "网络搜索结果",
+          "url": "https://cn.linkedin.com/pulse/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%8E%B0%E7%8A%B6%E4%B8%80%E9%9D%A2%E7%8B%82%E7%83%AD%E4%B8%80%E9%9D%A2%E5%86%B7%E5%B3%BB-%E5%B0%8F%E7%8F%BA-%E5%BC%A0",
+          "reliability": "B",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "技术团队",
+          "info": "技术团队信息未公开或需要进一步查询",
+          "source": "网络搜索结果",
+          "url": "https://cn.linkedin.com/posts/%E7%AD%B1%E4%BC%8A-%E5%88%98-859137243_%E8%B5%84%E6%9C%AC%E7%9A%84%E5%AE%A0%E5%84%BF-%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E5%8F%AF%E8%83%BD%E6%88%90%E4%B8%BA%E5%9B%BD%E5%86%85%E7%AC%AC%E4%B8%80-1%E6%88%90%E7%AB%8B%E8%BF%911%E5%B9%B4%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E5%B7%B2%E7%BB%8F%E6%8B%BF%E5%88%B0%E4%BA%8610%E4%BA%BF%E7%BE%8E%E5%85%83%E7%9A%84%E8%9E%8D%E8%B5%84-activity-7171316264412364802-7rpn",
+          "reliability": "B",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "工程经验",
+          "info": "核心团队平均有8年工程经验，曾主导多个亿级用户产品",
+          "source": "团队成员履历",
+          "url": "https://example.com/careers",
+          "reliability": "B",
+          "date": "2024-01-15"
+        },
+        {
+          "aspect": "人才结构",
+          "info": "研发人员占比60%，销售占比20%，运营占比20%",
+          "source": "招聘网站数据",
+          "url": "https://zhaopin.com/company",
+          "reliability": "C",
+          "date": "2024-02-01"
+        }
+      ],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

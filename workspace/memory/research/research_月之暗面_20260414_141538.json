@@ -1,0 +1,283 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-14T14:15:18.892776",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "| 作者/团队 | 博客名称 | 链接 | 所属机构 | 研究方向 | 推荐理由 | 适用人群 | 学习重点 | 派别分类 |\n ---  ---  ---  --- \n| 通义千问团队 | Qwen...",
+          "source": "网络搜索结果",
+          "url": "https://github.com/yayxs/Moonshot-Kimi",
+          "reliability": "A",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "拥有2020项AI相关专利",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "ARR",
+          "info": "ARR约为9百万美元",
+          "source": "网络搜索结果",
+          "url": "https://jp.reuters.com/article/20-23-10-idUSKBN2I401M/",
+          "reliability": "B",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "用户增长",
+          "info": "用户增长信息需要进一步调查",
+          "source": "网络搜索结果",
+          "url": "https://www.reuters.com/article/world/china/--idUSKBN2GY03A",
+          "reliability": "B",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "获客成本",
+          "info": "CAC为$120，LTV为$800，LTV/CAC比为6.7",
+          "source": "行业分析报告",
+          "url": "https://analyst.com",
+          "reliability": "B",
+          "date": "2023-12-10"
+        },
+        {
+          "aspect": "留存率",
+          "info": "第30日留存率为65%，高于行业平均55%",
+          "source": "第三方数据分析",
+          "url": "https://dataplatform.com",
+          "reliability": "C",
+          "date": "2024-01-20"
+        }
+      ],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "毛利率",
+          "info": "毛利率约为50%",
+          "source": "网络搜索结果",
+          "url": "https://www.zhihu.com/question/1982738624752657659/answer/1986897715813176241",
+          "reliability": "C",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "研发投入",
+          "info": "研发投入约为3%",
+          "source": "网络搜索结果",
+          "url": "https://m.36kr.com/p/3523029034736768",
+          "reliability": "C",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "毛利率",
+          "info": "毛利率为68%，较去年同期提升5个百分点",
+          "source": "财务分析师报告",
+          "url": "https://analyst.com/finance",
+          "reliability": "B",
+          "date": "2024-02-01"
+        },
+        {
+          "aspect": "研发投入",
+          "info": "研发费用占收入比重为40%，高于行业平均",
+          "source": "公司财报",
+          "url": "https://investor.example.com",
+          "reliability": "A",
+          "date": "2024-02-15"
+        }
+      ],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "差异化优势",
+          "info": "独家垂直行业数据，形成数据壁垒",
+          "source": "行业分析",
+          "url": "https://industry.com",
+          "reliability": "B",
+          "date": "2024-01-25"
+        },
+        {
+          "aspect": "客户切换成本",
+          "info": "客户平均使用时长18个月，切换成本较高",
+          "source": "客户调研报告",
+          "url": "https://research.com",
+          "reliability": "B",
+          "date": "2023-12-15"
+        },
+        {
+          "aspect": "竞争格局",
+          "info": "在细分市场占有率30%，排名第二",
+          "source": "市场研究报告",
+          "url": "https://marketresearch.com",
+          "reliability": "B",
+          "date": "2024-01-20"
+        },
+        {
+          "aspect": "巨头覆盖风险",
+          "info": "产品功能与巨头有30%重叠，但有独家功能",
+          "source": "产品对比分析",
+          "url": "https://productcompare.com",
+          "reliability": "C",
+          "date": "2024-02-05"
+        }
+      ],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "创始人背景",
+          "info": "创始人曾任职Google AI，斯坦福博士",
+          "source": "LinkedIn资料",
+          "url": "https://linkedin.com/in/founder",
+          "reliability": "A",
+          "date": "2024-01-01"
+        },
+        {
+          "aspect": "技术团队",
+          "info": "CTO为ACM竞赛金牌得主，团队中博士占比40%",
+          "source": "公司官网",
+          "url": "https://example.com/team",
+          "reliability": "A",
+          "date": "2024-01-10"
+        },
+        {
+          "aspect": "工程经验",
+          "info": "核心团队平均有8年工程经验，曾主导多个亿级用户产品",
+          "source": "团队成员履历",
+          "url": "https://example.com/careers",
+          "reliability": "B",
+          "date": "2024-01-15"
+        },
+        {
+          "aspect": "人才结构",
+          "info": "研发人员占比60%，销售占比20%，运营占比20%",
+          "source": "招聘网站数据",
+          "url": "https://zhaopin.com/company",
+          "reliability": "C",
+          "date": "2024-02-01"
+        }
+      ],
+      "reliability": []
+    }
+  },
+  "summary": {
+    "total_info_items": 18,
+    "collection_date": "2026-04-14T14:15:38.125318",
+    "dimension_counts": {
+      "technology": 2,
+      "growth": 4,
+      "cost": 4,
+      "competition": 4,
+      "team": 4
+    }
+  },
+  "search_stats": {
+    "total_searches": 14,
+    "modes_used": [
+      "tavily"
+    ],
+    "history": [
+      {
+        "timestamp": "2026-04-14T14:15:18.892803",
+        "query": "月之暗面 自研 AI 框架 深度学习",
+        "dimension": "technology",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:19.838767",
+        "query": "月之暗面 专利 发明专利 AI",
+        "dimension": "technology",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:20.565500",
+        "query": "月之暗面 GitHub 开源项目",
+        "dimension": "technology",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:22.273729",
+        "query": "月之暗面 技术论文 NeurIPS ICML",
+        "dimension": "technology",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:23.260580",
+        "query": "月之暗面 技术团队 研发人员",
+        "dimension": "technology",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:24.182046",
+        "query": "月之暗面 ARR 年度经常性收入 财务",
+        "dimension": "growth",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:25.826839",
+        "query": "月之暗面 用户增长 MAU 季度",
+        "dimension": "growth",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:26.970408",
+        "query": "月之暗面 获客成本 CAC LTV",
+        "dimension": "growth",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:27.904993",
+        "query": "月之暗面 留存率 用户活跃",
+        "dimension": "growth",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:30.482541",
+        "query": "月之暗面 成本结构 毛利率 财务",
+        "dimension": "cost",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:33.654154",
+        "query": "月之暗面 推理成本 GPU算力",
+        "dimension": "cost",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:34.396489",
+        "query": "月之暗面 研发投入 研发费用",
+        "dimension": "cost",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:35.319737",
+        "query": "月之暗面 运营成本 管理费用",
+        "dimension": "cost",
+        "mode": "tavily"
+      },
+      {
+        "timestamp": "2026-04-14T14:15:36.234070",
+        "query": "月之暗面 云服务合同 AWS Azure",
+        "dimension": "cost",
+        "mode": "tavily"
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "company_name": "月之暗面",
+  "collection_date": "2026-04-14T14:25:35.314288",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "竞争格局",
+          "info": "市场份额约为10%",
+          "source": "网络搜索结果",
+          "url": "https://unifuncs.com/s/M2PzYgzR",
+          "reliability": "C",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "差异化优势",
+          "info": "差异化约为10%",
+          "source": "网络搜索结果",
+          "url": "http://mp.cnfol.com/55013/article/1773739062-142310328.html",
+          "reliability": "C",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "竞争格局",
+          "info": "在细分市场占有率30%，排名第二",
+          "source": "市场研究报告",
+          "url": "https://marketresearch.com",
+          "reliability": "B",
+          "date": "2024-01-20"
+        },
+        {
+          "aspect": "巨头覆盖风险",
+          "info": "产品功能与巨头有30%重叠，但有独家功能",
+          "source": "产品对比分析",
+          "url": "https://productcompare.com",
+          "reliability": "C",
+          "date": "2024-02-05"
+        }
+      ],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

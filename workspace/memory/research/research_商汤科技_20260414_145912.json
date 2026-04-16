@@ -1,0 +1,50 @@
+{
+  "company_name": "商汤科技",
+  "collection_date": "2026-04-14T14:58:54.907433",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "商汤科技拥有自研技术能力，具体细节需要进一步调查",
+          "source": "网络搜索结果",
+          "url": "https://github.com/sensetime",
+          "reliability": "A",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "专利信息未公开或需要进一步查询",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

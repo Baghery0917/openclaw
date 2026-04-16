@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{company_name} - AI投资分析报告</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 报告容器 -->
+    <div class="report-container">
+        <!-- 封面页 -->
+        <div class="page cover-page">
+            <div class="cover-content">
+                <div class="cover-badge">AI投资分析报告</div>
+                <h1 class="company-name">{company_name}</h1>
+                <div class="cover-subtitle">深度五维分析报告</div>
+                
+                <div class="cover-metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">{investment_rating}</div>
+                        <div class="metric-label">投资评级</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">{target_valuation}</div>
+                        <div class="metric-label">目标估值</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">{industry_rank}</div>
+                        <div class="metric-label">行业排名</div>
+                    </div>
+                </div>
+                
+                <div class="cover-footer">
+                    <div class="report-date">报告日期：{report_date}</div>
+                    <div class="analyst-name">分析师：OpenClaw Investment Research</div>
+                    <div class="disclaimer">本报告仅供参考，不构成投资建议</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 执行摘要 -->
+        <div class="page summary-page">
+            <h2><i class="fas fa-bullseye"></i> 执行摘要</h2>
+            <div class="executive-summary">
+                {executive_summary}
+            </div>
+            
+            <div class="key-metrics-grid">
+                <div class="metric-card {tech_score_class}">
+                    <div class="metric-title">技术评分</div>
+                    <div class="metric-value">{tech_score}/10</div>
+                    <div class="metric-desc">{tech_highlight}</div>
+                </div>
+                <div class="metric-card {growth_score_class}">
+                    <div class="metric-title">增长评分</div>
+                    <div class="metric-value">{growth_score}/10</div>
+                    <div class="metric-desc">{growth_highlight}</div>
+                </div>
+                <div class="metric-card {cost_score_class}">
+                    <div class="metric-title">成本评分</div>
+                    <div class="metric-value">{cost_score}/10</div>
+                    <div class="metric-desc">{cost_assessment}</div>
+                </div>
+                <div class="metric-card {competition_score_class}">
+                    <div class="metric-title">竞争评分</div>
+                    <div class="metric-value">{competition_score}/10</div>
+                    <div class="metric-desc">{competitive_advantage}</div>
+                </div>
+                <div class="metric-card {team_score_class}">
+                    <div class="metric-title">团队评分</div>
+                    <div class="metric-value">{team_score}/10</div>
+                    <div class="metric-desc">{team_highlight}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 五维分析详情 -->
+        <div class="page analysis-page">
+            <h2><i class="fas fa-chart-network"></i> 五维深度分析</h2>
+            
+            <!-- 技术维度 -->
+            <div class="dimension-section" id="technology">
+                <h3><span class="dimension-icon">🔬</span> 技术维度</h3>
+                <div class="dimension-content">
+                    {technology_content}
+                </div>
+                <div class="reliability-badge reliability-{tech_reliability}">可靠性：{tech_reliability_label}</div>
+            </div>
+            
+            <!-- 增长维度 -->
+            <div class="dimension-section" id="growth">
+                <h3><span class="dimension-icon">📈</span> 增长维度</h3>
+                <div class="dimension-content">
+                    {growth_content}
+                </div>
+                <div class="reliability-badge reliability-{growth_reliability}">可靠性：{growth_reliability_label}</div>
+            </div>
+            
+            <!-- 成本维度 -->
+            <div class="dimension-section" id="cost">
+                <h3><span class="dimension-icon">💰</span> 成本维度</h3>
+                <div class="dimension-content">
+                    {cost_content}
+                </div>
+                <div class="reliability-badge reliability-{cost_reliability}">可靠性：{cost_reliability_label}</div>
+            </div>
+            
+            <!-- 竞争维度 -->
+            <div class="dimension-section" id="competition">
+                <h3><span class="dimension-icon">⚔️</span> 竞争维度</h3>
+                <div class="dimension-content">
+                    {competition_content}
+                </div>
+                <div class="reliability-badge reliability-{competition_reliability}">可靠性：{competition_reliability_label}</div>
+            </div>
+            
+            <!-- 团队维度 -->
+            <div class="dimension-section" id="team">
+                <h3><span class="dimension-icon">👥</span> 团队维度</h3>
+                <div class="dimension-content">
+                    {team_content}
+                </div>
+                <div class="reliability-badge reliability-{team_reliability}">可靠性：{team_reliability_label}</div>
+            </div>
+        </div>
+
+        <!-- 投资建议 -->
+        <div class="page recommendation-page">
+            <h2><i class="fas fa-lightbulb"></i> 投资建议</h2>
+            
+            <div class="recommendation-card {rating_class}">
+                <div class="recommendation-header">
+                    <div class="recommendation-title">{investment_rating}</div>
+                    <div class="recommendation-subtitle">{rating_explanation}</div>
+                </div>
+                <div class="recommendation-body">
+                    {recommendation_content}
+                </div>
+            </div>
+            
+            <div class="risk-section">
+                <h4><i class="fas fa-exclamation-triangle"></i> 风险提示</h4>
+                <ul class="risk-list">
+                    {risk_items}
+                </ul>
+            </div>
+        </div>
+
+        <!-- 附录 -->
+        <div class="page appendix-page">
+            <h2><i class="fas fa-paperclip"></i> 附录</h2>
+            
+            <div class="appendix-section">
+                <h4>信息可靠性评估</h4>
+                <table class="reliability-table">
+                    <thead>
+                        <tr>
+                            <th>信息类别</th>
+                            <th>来源</th>
+                            <th>可靠性等级</th>
+                            <th>验证方法</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {reliability_table_rows}
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="disclaimer-section">
+                <h4>免责声明</h4>
+                <p>1. 本报告基于公开信息分析，仅供参考。</p>
+                <p>2. 分析结果不构成投资建议，投资者需独立判断。</p>
+                <p>3. 市场有风险，投资需谨慎。</p>
+                <p>4. 报告日期：{report_date}，信息可能随时间变化。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

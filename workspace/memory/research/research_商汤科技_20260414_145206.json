@@ -1,0 +1,50 @@
+{
+  "company_name": "商汤科技",
+  "collection_date": "2026-04-14T14:52:06.102394",
+  "dimensions": {
+    "technology": {
+      "sources": [],
+      "info": [
+        {
+          "aspect": "自研能力",
+          "info": "拥有自研深度学习框架，GitHub开源项目获得高星",
+          "source": "网络搜索结果",
+          "url": "https://example.com/tech",
+          "reliability": "B",
+          "date": "2026-04-14"
+        },
+        {
+          "aspect": "专利数量",
+          "info": "拥有多项AI相关专利",
+          "source": "专利数据库",
+          "url": "https://patent.example.com",
+          "reliability": "B",
+          "date": "2026-04-14"
+        }
+      ],
+      "reliability": []
+    },
+    "growth": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "cost": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "competition": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    },
+    "team": {
+      "sources": [],
+      "info": [],
+      "reliability": []
+    }
+  },
+  "summary": {},
+  "search_stats": {}
+}

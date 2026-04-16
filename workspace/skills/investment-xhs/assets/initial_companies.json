@@ -1,0 +1,151 @@
+{
+  "companies": [
+    {
+      "name": "商汤科技",
+      "english_name": "SenseTime",
+      "founded_year": 2014,
+      "headquarters": "上海",
+      "core_business": "计算机视觉、人脸识别、AI平台",
+      "funding_stage": "已上市",
+      "last_funding_date": "2021-12-30",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["计算机视觉", "安防", "AI平台", "上市企业"]
+    },
+    {
+      "name": "旷视科技",
+      "english_name": "Megvii",
+      "founded_year": 2011,
+      "headquarters": "北京",
+      "core_business": "人脸识别、物流机器人、城市物联网",
+      "funding_stage": "已上市",
+      "last_funding_date": "2021-03-31",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["人脸识别", "物流机器人", "城市物联网", "上市企业"]
+    },
+    {
+      "name": "依图科技",
+      "english_name": "Yitu Technology",
+      "founded_year": 2012,
+      "headquarters": "上海",
+      "core_business": "AI芯片、医疗影像、智慧城市",
+      "funding_stage": "D轮",
+      "last_funding_date": "2020-06-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["AI芯片", "医疗AI", "智慧城市", "芯片设计"]
+    },
+    {
+      "name": "云从科技",
+      "english_name": "CloudWalk",
+      "founded_year": 2015,
+      "headquarters": "广州",
+      "core_business": "人脸识别、智慧金融、智慧治理",
+      "funding_stage": "已上市",
+      "last_funding_date": "2022-05-27",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["人脸识别", "智慧金融", "智慧治理", "上市企业"]
+    },
+    {
+      "name": "第四范式",
+      "english_name": "4Paradigm",
+      "founded_year": 2014,
+      "headquarters": "北京",
+      "core_business": "企业级AI平台、自动化机器学习",
+      "funding_stage": "D轮",
+      "last_funding_date": "2021-01-15",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["企业AI", "AutoML", "决策智能", "SaaS"]
+    },
+    {
+      "name": "智谱AI",
+      "english_name": "Zhipu AI",
+      "founded_year": 2019,
+      "headquarters": "北京",
+      "core_business": "大语言模型、AI对话、代码生成",
+      "funding_stage": "B轮",
+      "last_funding_date": "2023-10-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["大语言模型", "GLM", "代码生成", "清华背景"]
+    },
+    {
+      "name": "深言科技",
+      "english_name": "DeepLang",
+      "founded_year": 2021,
+      "headquarters": "北京",
+      "core_business": "大语言模型、AI写作、文本生成",
+      "funding_stage": "A轮",
+      "last_funding_date": "2023-08-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["大语言模型", "AI写作", "文本生成", "创业公司"]
+    },
+    {
+      "name": "月之暗面",
+      "english_name": "Moonshot AI",
+      "founded_year": 2023,
+      "headquarters": "北京",
+      "core_business": "长文本大模型、AI助手、Kimi",
+      "funding_stage": "A轮",
+      "last_funding_date": "2024-02-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["长文本模型", "Kimi", "AI助手", "热门初创"]
+    },
+    {
+      "name": "零一万物",
+      "english_name": "01.AI",
+      "founded_year": 2023,
+      "headquarters": "北京",
+      "core_business": "大语言模型、Yi系列模型、AI基础设施",
+      "funding_stage": "A轮",
+      "last_funding_date": "2023-11-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["Yi模型", "大语言模型", "AI基础设施", "李开复"]
+    },
+    {
+      "name": "硅基智能",
+      "english_name": "Silicon Intelligence",
+      "founded_year": 2017,
+      "headquarters": "南京",
+      "core_business": "数字人、AI语音、智能客服",
+      "funding_stage": "C轮",
+      "last_funding_date": "2022-12-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["数字人", "AI语音", "智能客服", "虚拟人"]
+    },
+    {
+      "name": "澜舟科技",
+      "english_name": "LanZhou Technology",
+      "founded_year": 2021,
+      "headquarters": "北京",
+      "core_business": "孟子大模型、金融NLP、知识图谱",
+      "funding_stage": "A+轮",
+      "last_funding_date": "2023-06-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["孟子模型", "金融NLP", "知识图谱", "周明"]
+    },
+    {
+      "name": "面壁智能",
+      "english_name": "FaceWall AI",
+      "founded_year": 2022,
+      "headquarters": "北京",
+      "core_business": "大语言模型、AI智能体、CogAgent",
+      "funding_stage": "天使轮",
+      "last_funding_date": "2023-09-01",
+      "last_analysis_date": null,
+      "analysis_count": 0,
+      "tags": ["CogAgent", "AI智能体", "大语言模型", "清华系"]
+    }
+  ],
+  "last_updated": "2026-04-14",
+  "total_companies": 12,
+  "version": "1.0"
+}
