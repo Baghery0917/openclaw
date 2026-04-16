@@ -9,3 +9,4 @@ identity/
 canvas/
 delivery-queue/
 update-check.json
+agents/main/agent/models.json
